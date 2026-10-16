@@ -1,0 +1,20 @@
+name: Run Telegram Bot
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # Всеки ден в 08:00 сутринта
+  workflow_dispatch: # За ръчно стартиране
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install -r requirements.txt
+      - env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: python main.py
