@@ -5,8 +5,8 @@ import requests
 
 # ==========================================
 # НАСТРОЙКИ НА ТЕЛЕГРАМ БОТА:
-TELEGRAM_TOKEN = os.getenv("8624759346:AAHTRUvUeFXvsxUyMoo_GFDBzmI3nLWelYs")
-CHAT_ID = os.getenv("8995251916")
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 SENT_FILE = "sent_links_new.txt"
 
 HEADERS = {
