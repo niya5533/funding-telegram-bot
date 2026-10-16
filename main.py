@@ -7,7 +7,7 @@ import requests
 # НАСТРОЙКИ НА ТЕЛЕГРАМ БОТА:
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
-SENT_FILE = "sent_links_new.txt"
+SENT_FILE = "sent_links_newbot.txt"
 
 HEADERS = {
     "User-Agent": (
